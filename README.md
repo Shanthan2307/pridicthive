@@ -1,170 +1,158 @@
 <<<<<<< HEAD
-# pridicthive
+<<<<<<< HEAD
 =======
 # 🐝 PredictHive
+=======
+# PredictHive 🎮
+>>>>>>> 22deb5f (docs: Add comprehensive README)
 
-**AI-powered prediction markets on Monad** - A beautiful, Monad-branded prediction market interface with futuristic design.
+A Next.js-based prediction market platform with an innovative Galaga-style AI debate visualization. Watch AI agents battle it out in classic arcade game fashion to determine prediction outcomes!
 
-![Monad Colors](https://img.shields.io/badge/Monad-6E54FF?style=for-the-badge&logo=ethereum&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![PredictHive Demo](https://img.shields.io/badge/Status-Demo-brightgreen)
+![Next.js](https://img.shields.io/badge/Next.js-15.5-black)
+![React](https://img.shields.io/badge/React-19.0-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 
-## 🎨 Features
+## 🎯 Features
 
-- ✨ **Monad Brand Colors** - Full integration of official Monad palette
-  - Main Purple: `#6E54FF`
-  - Neon Cyan: `#85E6FF`
-  - Dark Background: `#0E091C`
-  - Light Purple: `#DDD7FE`
-  
-- 🤖 **AI Agent System** - Multiple specialized agents with glowing avatars
-  - Market Analyst 📊
-  - Prediction Expert 🔮
-  - Risk Manager 🛡️
-  - Portfolio Advisor 💼
+### Galaga-Style Debate Mode
+- **Authentic Galaga Combat**: Based on original game mechanics
+- **AI Agent Battles**: Candidates represented as bugs fighting for dominance
+- **Real-time HP System**: Visual representation of argument strength
+- **Auto-targeting Ship**: AI-controlled defense system
+- **Dive Attacks**: Bugs perform swooping attacks with Bezier curve paths
+- **Projectile Combat**: Ships and bugs shoot at each other
 
-- 💬 **Beautiful Chat Interface**
-  - User messages: Purple-to-cyan gradient
-  - Agent messages: Dark with light purple text
-  - Real-time typing indicators
-  - Smooth animations with Framer Motion
+### Mobile Game Layout
+- **Centered Interface**: Mobile game-style layout (500px max width)
+- **Responsive Design**: Adapts to any screen size
+- **Toggleable Sidebar**: Hamburger menu for clean viewing
+- **Glass-morphism UI**: Modern, sleek interface design
 
-- 📊 **Portfolio Dashboard**
-  - Live portfolio tracking
-  - Active predictions display
-  - Win rate statistics
-  - Quick bet placement
-
-- 💳 **x402 Pay Integration** - Ready for payment integration
-- 📱 **Fully Responsive** - Mobile-first design
-- 🎭 **Futuristic UI** - Glowing borders, gradient buttons, animated backgrounds
+### Tech Stack
+- **Framework**: Next.js 15.5 with App Router
+- **UI**: React 19 + TypeScript
+- **Styling**: Tailwind CSS with custom Monad theme
+- **Animations**: Framer Motion
+- **Canvas**: HTML5 Canvas for game rendering
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-
-- Node.js 18+ 
-- npm 9+
+- Node.js 18.0 or higher
+- npm 9.0 or higher
 
 ### Installation
 
+1. Clone the repository:
 ```bash
-# Navigate to project
+git clone https://github.com/YOUR_USERNAME/predicthive.git
 cd predicthive
+```
 
-# Install dependencies (already done)
+2. Install dependencies:
+```bash
 npm install
+```
 
-# Run development server (already running!)
+3. Run the development server:
+```bash
 npm run dev
 ```
 
-### Access the App
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-Open your browser to:
-- **Local**: http://localhost:3000
-- **Network**: http://100.70.92.226:3000
+## 🎮 How to Use
+
+1. **Navigate to Chat**: Go to `/chat` route
+2. **Enter Prediction Query**: Type a prediction question (e.g., "Who will win FIFA 2026?")
+3. **Watch the Battle**: Debate mode activates with Galaga-style combat
+4. **Toggle Sidebar**: Click the hamburger menu (☰) to show/hide sidebar
 
 ## 📁 Project Structure
 
 ```
 predicthive/
 ├── app/
-│   ├── page.tsx                    # Landing page with animated entry
-│   ├── layout.tsx                  # Root layout
-│   ├── globals.css                 # Global styles with Monad colors
-│   └── chat/
-│       ├── page.tsx                # Chat redirect
-│       ├── layout.tsx              # Chat layout with sidebar
-│       └── [id]/
-│           └── page.tsx            # Individual chat page
+│   ├── chat/
+│   │   ├── [id]/          # Dynamic chat routes
+│   │   ├── layout.tsx     # Chat layout with sidebar
+│   │   └── page.tsx       # Chat landing page
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
 ├── components/
 │   ├── chat/
-│   │   ├── chat-interface.tsx      # Main chat component
-│   │   ├── chat-messages.tsx       # Message display with animations
-│   │   ├── chat-input.tsx          # Message input with auto-resize
-│   │   └── portfolio-panel.tsx     # Right sidebar portfolio
+│   │   ├── galaga-visualizer.tsx  # Main game component
+│   │   ├── chat-interface.tsx     # Chat UI
+│   │   ├── chat-messages.tsx      # Message display
+│   │   ├── chat-input.tsx         # Input component
+│   │   └── portfolio-panel.tsx    # Side panel
 │   └── layout/
-│       ├── sidebar.tsx             # Left sidebar with AI agents
-│       └── top-bar.tsx             # Top navigation bar
-├── lib/
-│   └── utils.ts                    # Utility functions
-├── tailwind.config.ts              # Tailwind with Monad colors
-├── tsconfig.json                   # TypeScript configuration
-└── package.json                    # Dependencies
+│       ├── sidebar.tsx            # Navigation sidebar
+│       ├── sidebar-context.tsx    # Sidebar state management
+│       └── top-bar.tsx            # Top navigation
+├── public/
+│   └── galaga/            # Game sprite assets
+│       ├── Blue.png       # Blue bug sprite
+│       ├── Green.png      # Green bug sprite
+│       ├── Red.png        # Red bug sprite
+│       ├── Ship.png       # Player ship sprite
+│       └── ...            # Other assets
+└── lib/
+    └── utils.ts           # Utility functions
 ```
 
-## 🎨 Monad Color Palette
+## 🎨 Design System
 
-All colors are defined in `tailwind.config.ts`:
+### Monad Color Palette
+- **Background**: `#0E091C` (Dark purple)
+- **Primary**: `#6E54FF` (Purple)
+- **Cyan**: `#85E6FF` (Accent 1)
+- **Pink**: `#FF8EE4` (Accent 2)
+- **Green**: `#00FF88` (Success)
 
-```typescript
-monad: {
-  purple: '#6E54FF',        // Main brand color
-  'light-purple': '#DDD7FE', // Text and accents
-  'dark-bg': '#0E091C',      // Background
-  black: '#000000',          // Sidebar
-  white: '#FFFFFF',          // Text
-  cyan: '#85E6FF',           // Highlights and active states
-  'light-cyan': '#B9E3F9',   // Secondary cyan
-  pink: '#FF8EE4',           // Accent
-  orange: '#FFAE45',         // Accent
-}
-```
+### Visual Effects
+- Glass-morphism on UI cards
+- Glow effects on sprites
+- Scanline overlay for retro feel
+- Smooth animations with Framer Motion
+- Gradient HP bars
 
-## 🛠️ Key Components
+## 🎯 Galaga Mechanics
 
-### Landing Page (`app/page.tsx`)
-- Animated grid background
-- Gradient orbs with pulse animation
-- "Enter the Hive" button with shimmer effect
-- x402 Pay badge
+Based on the original Galaga Unity implementation:
 
-### Chat Interface (`components/chat/`)
-- **Messages**: User messages in purple gradient, agent messages in dark theme
-- **Agent Avatars**: Cyan glow border with purple shadow
-- **Input**: Auto-resizing textarea with gradient send button
-- **Loading**: Animated dots in Monad colors
+### Bug States
+- **Formation**: Bugs stay in grid with wave motion
+- **Diving**: Bezier curve attack toward ship
+- **Returning**: Smooth return to formation
+- **Dead**: Eliminated from battle
 
-### Sidebar (`components/layout/sidebar.tsx`)
-- AI agent list with hover effects
-- "New Prediction" button with gradient
-- Connect Wallet integration
-- Mobile-responsive with overlay
+### Combat System
+- **Ship Auto-targeting**: Finds and shoots closest bug
+- **Bug Dive Attacks**: Random bugs dive with curved paths
+- **Projectile System**: Cyan (ship) and pink (bug) bullets
+- **Collision Detection**: 30px radius hit detection
+- **Damage System**: 20 HP per hit
 
-### Portfolio Panel (`components/chat/portfolio-panel.tsx`)
-- Total portfolio value with gradient text
-- Active bets tracking
-- Win rate display
-- Quick stats section
+### AI Behavior
+- **HiveMind Pattern**: Random bug activation every 1.5-3.5s
+- **Red Bugs**: Shoot during dive (0.5s cooldown)
+- **Movement**: Smooth damping (SmoothDamp equivalent)
+- **Formation Grid**: 3-column layout with wave motion
 
-## 🎯 Custom Utilities
+## 📚 Documentation
 
-### Gradients
-```css
-.monad-gradient          /* Purple to cyan gradient */
-.monad-gradient-text     /* Gradient text effect */
-```
+- [DEBATE_MODE.md](./DEBATE_MODE.md) - Debate mode implementation details
+- [GALAGA_FIGHT_SIMULATION.md](./GALAGA_FIGHT_SIMULATION.md) - Combat mechanics
+- [MOBILE_GAME_LAYOUT.md](./MOBILE_GAME_LAYOUT.md) - Layout design
+- [VISUAL_GUIDE.md](./VISUAL_GUIDE.md) - Visual design guide
+- [PROJECT_STATUS.md](./PROJECT_STATUS.md) - Current project status
 
-### Glows
-```css
-.monad-agent-glow        /* Cyan glow for agent avatars */
-.monad-border-glow       /* Purple glow for borders */
-```
+## 🛠️ Development
 
-### Shadows
-```css
-shadow-monad-glow        /* Subtle purple glow */
-shadow-monad-cyan-glow   /* Cyan glow effect */
-shadow-monad-strong      /* Strong purple glow */
-```
-
-### Scrollbars
-```css
-.monad-scrollbar         /* Purple scrollbar with cyan hover */
-```
-
-## 🔧 Scripts
+### Available Scripts
 
 ```bash
 npm run dev      # Start development server
@@ -174,74 +162,63 @@ npm run lint     # Run ESLint
 npm run format   # Format code with Prettier
 ```
 
-## 🌟 Features to Add
+### Tech Details
+- **Canvas Rendering**: 60 FPS with requestAnimationFrame
+- **State Management**: React hooks + Context API
+- **Image Preloading**: Loading screen while sprites load
+- **Responsive Canvas**: Adapts to container dimensions
 
-- [ ] Real AI agent integration
-- [ ] Wallet connection (Privy/WalletConnect)
-- [ ] x402 Pay payment processing
-- [ ] Real-time market data
-- [ ] Bet placement functionality
-- [ ] User authentication
-- [ ] Portfolio persistence
+## 🚧 Roadmap
+
+### Phase 1: Core Mechanics ✅
+- [x] Galaga-style visualization
+- [x] Bug dive attacks
+- [x] Ship auto-targeting
+- [x] Collision detection
+- [x] HP system
+
+### Phase 2: AI Integration (Coming Soon)
+- [ ] ChatGPT API integration
+- [ ] Real-time debate processing
+- [ ] Argument strength → HP mapping
+- [ ] Victory/defeat logic
+
+### Phase 3: Enhanced Features
+- [ ] Multiple dive patterns (loop, spiral)
+- [ ] Boss bugs with special abilities
+- [ ] Sound effects and music
+- [ ] Power-ups and special weapons
+- [ ] Combo multipliers
+
+### Phase 4: Prediction Markets
+- [ ] Wallet integration
+- [ ] Token staking
 - [ ] Market creation
-- [ ] Social features
-
-## 📦 Dependencies
-
-### Core
-- Next.js 15.1.0
-- React 19.0.0
-- TypeScript 5
-
-### UI
-- Tailwind CSS 3.4.1
-- Framer Motion 12.4.3
-- Lucide React (icons)
-- Radix UI (primitives)
-
-### Utilities
-- clsx & tailwind-merge
-- react-textarea-autosize
-
-## 🎭 Design Philosophy
-
-PredictHive follows Monad's futuristic, high-performance aesthetic:
-
-1. **Dark Mode First** - Deep blacks (#0E091C) with vibrant accents
-2. **Glowing Elements** - Cyan and purple glows for interactive elements
-3. **Smooth Animations** - Framer Motion for fluid transitions
-4. **Gradient Accents** - Purple-to-cyan gradients for primary actions
-5. **Clean Typography** - System fonts for optimal readability
-6. **Responsive Design** - Mobile-first approach
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-```bash
-npm run build
-# Deploy to Vercel
-```
-
-### Docker
-```dockerfile
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run build
-CMD ["npm", "start"]
-```
-
-## 📝 License
-
-MIT
+- [ ] Outcome resolution
 
 ## 🤝 Contributing
 
-Contributions welcome! Please follow the Monad color palette and design system.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🙏 Acknowledgments
+
+- Original Galaga game mechanics
+- Monad blockchain for design inspiration
+- Next.js team for the amazing framework
+
+## 📧 Contact
+
+For questions or feedback, please open an issue on GitHub.
 
 ---
 
+<<<<<<< HEAD
 **Built with 💜 for Monad** | Powered by x402 Pay
 >>>>>>> d6bae42 (Initial commit: PredictHive with Galaga-style AI debate mode)
+=======
+Built with ❤️ using Next.js, React, and TypeScript
+>>>>>>> 22deb5f (docs: Add comprehensive README)
