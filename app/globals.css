@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-monad-purple/20;
+  }
+
+  body {
+    @apply bg-monad-dark-bg text-monad-white antialiased;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .monad-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .monad-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .monad-scrollbar::-webkit-scrollbar-thumb {
+    background: #6E54FF;
+    border-radius: 4px;
+  }
+
+  .monad-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #85E6FF;
+  }
+
+  .monad-gradient {
+    background: linear-gradient(135deg, #6E54FF 0%, #85E6FF 100%);
+  }
+
+  .monad-gradient-text {
+    background: linear-gradient(135deg, #6E54FF 0%, #85E6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .monad-border-glow {
+    border: 1px solid #6E54FF;
+    box-shadow: 0 0 20px rgba(110, 84, 255, 0.3), 0 0 40px rgba(110, 84, 255, 0.15);
+  }
+
+  .monad-agent-glow {
+    border: 2px solid #85E6FF;
+    box-shadow: 0 0 15px rgba(133, 230, 255, 0.4), 0 0 30px rgba(110, 84, 255, 0.2);
+  }
+}
