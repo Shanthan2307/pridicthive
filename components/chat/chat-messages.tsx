@@ -5,9 +5,10 @@ import { motion } from 'framer-motion';
 
 interface Message {
   id: string;
-  role: 'user' | 'assistant';
+  role: 'user' | 'assistant' | 'system';
   content: string;
   timestamp: Date;
+  debateData?: any;
 }
 
 export default function ChatMessages({
@@ -37,6 +38,8 @@ export default function ChatMessages({
             className={`max-w-2xl rounded-2xl px-6 py-4 ${
               message.role === 'user'
                 ? 'monad-gradient text-white'
+                : message.role === 'system'
+                ? 'bg-monad-purple/20 border border-monad-purple/30 text-monad-cyan'
                 : 'bg-monad-black/50 border border-monad-purple/20 text-monad-light-purple'
             }`}
           >
@@ -48,7 +51,15 @@ export default function ChatMessages({
                 <span className="text-xs font-semibold text-monad-cyan">AI Agent</span>
               </div>
             )}
-            <p className="text-sm leading-relaxed">{message.content}</p>
+            {message.role === 'system' && (
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-6 h-6 rounded-full bg-monad-purple/30 flex items-center justify-center text-sm">
+                  ⚙️
+                </div>
+                <span className="text-xs font-semibold text-monad-purple">System</span>
+              </div>
+            )}
+            <p className="text-sm leading-relaxed whitespace-pre-line">{message.content}</p>
             <div className="mt-2 text-xs opacity-50">
               {message.timestamp.toLocaleTimeString()}
             </div>

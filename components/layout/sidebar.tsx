@@ -31,7 +31,7 @@ export default function Sidebar() {
           fixed md:relative inset-y-0 left-0 z-40
           w-72 bg-monad-black border-r border-monad-purple/20
           transform transition-transform duration-300 ease-in-out
-          ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+          ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
         `}
       >
         <div className="flex flex-col h-full">
@@ -103,7 +103,7 @@ export default function Sidebar() {
       {/* Overlay for mobile */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-30"
+          className="md:hidden fixed inset-0 bg-black/50 z-30"
           onClick={toggleSidebar}
         />
       )}
